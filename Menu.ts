@@ -1,6 +1,22 @@
 import readlinesync = require("readline-sync");
+import { Atendimento } from "./src/model/Atendimento";
+import { AtendimentoConvenio } from "./src/model/AtendimentoConvenio";
+import { AtendimentoParticular } from "./src/model/AtendimentoParticular";
 
 export function main() {
+
+   // Objeto da Classe Atendimento (Teste)
+
+     const atendimentoConvenio: AtendimentoConvenio = new AtendimentoConvenio("Mariana Lima", 11999996666, 
+    "Ressonância Magnética", 600, "Unimed");
+    atendimentoConvenio.visualizar();
+    atendimentoConvenio.autorizarExame();
+    
+    const atendimentoParticular: AtendimentoParticular = new AtendimentoParticular("Victor Alves", 11977775555, 
+    "Tomografia", 450, 20); 
+    atendimentoParticular.visualizar(); 
+    atendimentoParticular.aplicarDesconto(); 
+    atendimentoParticular.visualizar(); 
 
     let opcao: number;
 
