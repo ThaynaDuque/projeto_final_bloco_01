@@ -1,4 +1,4 @@
-export class Atendimento {
+export abstract class Atendimento {
 
     private _paciente: string;
     private _contato: number;
